@@ -107,35 +107,6 @@ Structured annotations are generated under schema-constrained vision-language pr
 
 For validation and test images, structured descriptions are intended for **post-hoc diagnostic analysis** and are not provided to a detector during inference. This prevents per-image textual information from becoming an evaluation-time oracle.
 
-### Example annotation concept
-
-The following example only illustrates the semantic organization of MAPS and does not define the final released file format.
-
-```json
-{
-  "environment": {
-    "weather": "foggy",
-    "time_of_day": "night",
-    "visibility": "low"
-  },
-  "geographical_context": "harbor",
-  "targets": {
-    "count": 6,
-    "dominant_scale": "small",
-    "density": "dense"
-  },
-  "spatial_relations": [
-    "multiple vessels distributed from left to right",
-    "several distant targets near the horizon"
-  ],
-  "perceptual_quality": {
-    "contrast": "low",
-    "blur": "moderate",
-    "reflection": "strong"
-  }
-}
-```
-
 ## Dataset Construction
 
 <img src="assets/construction_pipeline.png" width="100%" alt="MarinVocab construction pipeline">
@@ -181,15 +152,7 @@ A **partial release** of MarinVocab is currently available:
 - **Download:** https://pan.baidu.com/s/1J6JjY0c0gZjWGAuwwCaKww
 - **Password:** `b1ah`
 
-The complete MarinVocab dataset will be released after the formal publication of the associated paper. The planned release will include:
-
-- images that can be publicly redistributed;
-- object-level bounding-box annotations;
-- fixed training, validation, and test splits;
-- base/novel category definitions;
-- structured diagnostic labels;
-- ZSD/GZSD evaluation scripts;
-- condition-wise diagnostic evaluation tools.
+The complete MarinVocab dataset will be released after the formal publication of the associated paper
 
 For research collaboration, please contact the corresponding author.
 
@@ -204,16 +167,3 @@ MarinVocab is intended to support research on:
 - dense-vessel and complex-layout perception;
 - diagnostic evaluation of vision-language detectors;
 - safety-critical perception for intelligent waterborne transportation.
-
-## Citation
-
-The associated paper is currently under review. Formal bibliographic information will be updated after publication.
-
-```bibtex
-@article{song2026marinvocab,
-  title   = {MarinVocab: Toward Diagnostic and Robust Maritime Open-Vocabulary Detection for Intelligent Waterborne Transportation},
-  author  = {Song, Pei and Feng, Hui and Xu, Haixiang and Wang, Shanshan and He, Jianhua and Ge, Shuzhi Sam},
-  year    = {2026},
-  note    = {Manuscript under review}
-}
-```
